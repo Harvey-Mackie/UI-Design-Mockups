@@ -17,3 +17,6 @@ The application allows developers to **instantly** display created prototypes in
 - iPhone
 - Macbook
 - Mac Monitor
+
+![iphonemockup50](https://user-images.githubusercontent.com/38426388/50850395-add28d00-1371-11e9-9c63-fa4b432334f4.png)
+![ipadmockup35](https://user-images.githubusercontent.com/38426388/50850417-bcb93f80-1371-11e9-8558-daabe252c0e2.png)
