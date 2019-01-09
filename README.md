@@ -22,4 +22,4 @@ The application allows developers to **instantly** display created prototypes in
 ![iphonemockup95](https://user-images.githubusercontent.com/38426388/50903689-5d613b00-1416-11e9-9116-69a5138fd744.png)
 ![macmockup65](https://user-images.githubusercontent.com/38426388/50903690-5df9d180-1416-11e9-9b2c-1bacff9f9f32.png)
 ![monitormockup90](https://user-images.githubusercontent.com/38426388/50903691-5df9d180-1416-11e9-84f6-7256103b9bfa.png)
-![ipadmockup70](https://user-images.githubusercontent.com/38426388/50903692-5df9d180-1416-11e9-82da-5d47607e7011.png)
+
