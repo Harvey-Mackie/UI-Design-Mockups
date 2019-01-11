@@ -3,6 +3,17 @@
 # UI Design Mockups
 The application allows developers to **instantly** display created prototypes in a variety of devices, from mobile to desktop. Create multiple wireframe mockups **hassle-free** therefore enabling more time spent coding/designing the applications instead of the static mockups.
 
+## Requirements :
+1. Download and install [OpenCV](https://github.com/opencv/opencv/releases/tag/2.4.13.6).
+2. Numpy
+
+```python
+$ pip install numpy
+```
+3. PyQt5
+```python
+$ pip install PyQt5
+```
 ![responsiveweb](https://user-images.githubusercontent.com/38426388/50747032-b7e97400-1229-11e9-8122-8fe2833d1f1e.png)
 
 ## Steps
@@ -37,3 +48,6 @@ When importing an image, for the best results, ensure that the images comply wit
 ![macmockup65](https://user-images.githubusercontent.com/38426388/50903690-5df9d180-1416-11e9-9b2c-1bacff9f9f32.png)
 ![monitormockup90](https://user-images.githubusercontent.com/38426388/50903691-5df9d180-1416-11e9-84f6-7256103b9bfa.png)
 
+
+## License
+Copyright (c) 2019 Harvey Mackie
