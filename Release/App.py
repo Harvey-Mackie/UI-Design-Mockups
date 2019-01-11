@@ -6,7 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog
+from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog, QMessageBox
 from PyQt5.QtGui import QIcon
 import UI_Mockup as UI
 
@@ -457,9 +457,13 @@ class Ui_MainWindow(object):
         
         self.buttonUpload.clicked.connect(self.setImage)
 
+        self.buttonManual.clicked.connect(self.Manual)
+    
         self.radioColourBlack.setEnabled(False)
 
 
+        self.buttonManual.hide()
+        
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Mockup Generator"))
@@ -615,6 +619,8 @@ class Ui_MainWindow(object):
         print("Success")
         self.resetWindow()
 
+    def Manual(self):
+        msg = QtWidgets.QMessageBox.question(self,'test', 'test',QtWidgets.QMessageBox.Yes|QtWidgets.QMessageBox.No)
     
 
             

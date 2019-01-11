@@ -64,15 +64,23 @@ def CreateMockup(img,colour,size,device):
         elif(device=="iPad"):
             ImageProperties[6] += 1
             ImageProperties[7] += 1
-            
+ 
     image = cv2.resize(image,(ImageProperties[7],ImageProperties[6]))
+
     #Background Image
     imageLink = "Devices/"+device+"-"+colour+".png"
 
     device_img = cv2.imread(imageLink,  cv2.IMREAD_UNCHANGED)
     device_img= cv2.resize(device_img,(ImageProperties[1],ImageProperties[0]))
-
-    device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
+    try:
+        device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
+    except ValueError:
+        print("Fail - Add Alpha channel")
+        b, g, r = cv2.split(image)
+        alpha_channel = np.ones(b.shape, dtype=b.dtype) * 50 #creating a dummy alpha channel image.
+        image = cv2.merge((b, g, r, alpha_channel))
+        device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
+        
     cv2.imshow("Device", device_img)
 
     cv2.imwrite("Exports/"+size+device+"Mockup"+str(random.randint(1,21)*5)+".png",device_img)
