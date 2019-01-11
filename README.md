@@ -1,5 +1,3 @@
-#### Finish Date 11th of January 2019
-
 # UI Design Mockups
 The application allows developers to **instantly** display created prototypes in a variety of devices, from mobile to desktop. Create multiple wireframe mockups **hassle-free** therefore enabling more time spent coding/designing the applications instead of the static mockups.
 
@@ -25,9 +23,11 @@ $ pip install PyQt5
 ## Steps
 - Insert image
 - Choose device for mockup
-  - Mobile devices page orientation can be altered 
-      (Landscape or Portrait)
+  - Colour
+  - Size
 - View .PNG stored in your directory
+
+![gui](https://user-images.githubusercontent.com/38426388/51013382-fa78bc80-1559-11e9-8ad4-26060ebfa2e4.PNG)
 
 ## Mockup Devices
 - Tablet (iPad) 
