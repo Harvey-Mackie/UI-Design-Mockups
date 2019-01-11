@@ -28,6 +28,9 @@ $ pip install PyQt5
   - Size
 - View .PNG stored in your directory
 
+![gui](https://user-images.githubusercontent.com/38426388/51013382-fa78bc80-1559-11e9-8ad4-26060ebfa2e4.PNG)
+
+
 ## Mockup Devices
 - Tablet (iPad) 
 - Phone (iPhone)
