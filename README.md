@@ -18,7 +18,7 @@ The application allows developers to **instantly** display created prototypes in
 - Laptop (Macbook)
 - Monitor (Mac)
 
-### Import Image Recommendations
+## Import Image Recommendations
 
 #### Exported Images:
 Large Images - 900 pixels. Small Images - 450 pixels.
