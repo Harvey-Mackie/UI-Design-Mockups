@@ -7,14 +7,13 @@ The application allows developers to **instantly** display created prototypes in
 1. Download and install [OpenCV](https://github.com/opencv/opencv/releases/tag/2.4.13.6).
 2. Numpy
 
-```python
+```Dos
 $ pip install numpy
 ```
 3. PyQt5
-```python
+```Dos
 $ pip install PyQt5
 ```
-![responsiveweb](https://user-images.githubusercontent.com/38426388/50747032-b7e97400-1229-11e9-8122-8fe2833d1f1e.png)
 
 ## Steps
 - Insert image
