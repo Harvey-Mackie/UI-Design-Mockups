@@ -13,10 +13,24 @@ The application allows developers to **instantly** display created prototypes in
 - View .PNG stored in your directory
 
 ## Mockup Devices
-- iPad 
-- iPhone
-- Macbook
-- Mac Monitor
+- Tablet (iPad) 
+- Phone (iPhone)
+- Laptop (Macbook)
+- Monitor (Mac)
+
+### Import Image Recommendations
+
+#### Exported Images:
+Large Images - 900 pixels. Small Images - 450 pixels.
+
+#### Importing Images:
+When importing an image, for the best results, ensure that the images comply with the recommended image size to prevent stretching.
+
+- Phone: Large = 614:360.	Small = 307:180
+- Tablet: Large = 	535:405	Small = 268:203
+- Laptop: Large = 427:514	Small = 214:257
+- Monitor: Large = 585:828	Small = 293:414
+
 
 ## Export Examples 
 ![iphonemockup95](https://user-images.githubusercontent.com/38426388/50903689-5d613b00-1416-11e9-9116-69a5138fd744.png)
