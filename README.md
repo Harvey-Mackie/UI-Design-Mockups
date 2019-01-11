@@ -16,7 +16,7 @@ $ pip install numpy
 ```Dos
 $ pip install PyQt5
 ```
-6. Open the terminal and navigate to the respository
+6. Open the terminal and run the application
 ```Dos
   C:\GitHub\UI-Design-Mockups\Release>python App.py 
  ```
