@@ -17,9 +17,9 @@ $ pip install numpy
 $ pip install PyQt5
 ```
 6. Open the terminal and navigate to the respository
-7 . ```Dos
-  C:\GitHub\UI-Design-Mockups\Release>python App.py
-  ```
+
+7 . Run application
+
   
 ## Steps
 - Insert image
