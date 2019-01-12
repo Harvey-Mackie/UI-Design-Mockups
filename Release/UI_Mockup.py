@@ -1,24 +1,6 @@
 import numpy as np
 import cv2
 import random
-import imutils
-
-#Users Image
-#def MakeWhiteBlack(device_img):
-def RotateDevice(img,angle):
-    img = cv2.imread(img)
-    (h, w) = img.shape[:2] #get height and width
-    # calculate the center of the image
-    center = (w / 2, h / 2)
-    scale = 1.8
-    #erform the counter clockwise rotation holding at the center
-    # 90 degrees
-    M = cv2.getRotationMatrix2D(center, angle, scale)
-    rotated90  = cv2.warpAffine(img, M, (h, w))
-     
-    cv2.imshow('Image rotated by 90 degrees',rotated90)
-    cv2.waitKey(0) # waits until a key is pressed
-    cv2.destroyAllWindows() # destroys the window showing image
 
 def CreateMockup(img,colour,size,device):
     image = cv2.imread(img, cv2.IMREAD_UNCHANGED)
@@ -26,26 +8,32 @@ def CreateMockup(img,colour,size,device):
     width = 900
     height = 900
     if(device=="iPhone"):
-        PixelWidthStart = 270
-        PixelWidthEnd = 630
-        PixelHeightStart = 143
-        PixelHeightEnd = 757
-        MockupImageHeight = 614
-        MockupImageWidth = 360
+        width = 660
+        height = 330
+        PixelWidthStart = 24
+        PixelWidthEnd = 307
+        PixelHeightStart = 78
+        PixelHeightEnd = 582
+        MockupImageHeight = 504
+        MockupImageWidth = 283
     elif(device=="iPad"):
-        PixelWidthStart = 245
-        PixelWidthEnd = 650
-        PixelHeightStart = 175
-        PixelHeightEnd = 710
-        MockupImageHeight = 535
-        MockupImageWidth = 405
+        width = 546
+        height = 425
+        PixelWidthStart = 45
+        PixelWidthEnd = 380
+        PixelHeightStart = 50
+        PixelHeightEnd = 490
+        MockupImageHeight = 440
+        MockupImageWidth =  335
     elif(device=="Mac"):
-        PixelWidthStart = 193
-        PixelWidthEnd = 707
-        PixelHeightStart = 243
-        PixelHeightEnd = 670
-        MockupImageHeight = 427
-        MockupImageWidth = 514
+        width =  290 
+        height = 491  
+        PixelWidthStart = 62
+        PixelWidthEnd = 428
+        PixelHeightStart = 25
+        PixelHeightEnd = 254
+        MockupImageHeight = 229 
+        MockupImageWidth =  366
     elif(device=="Monitor"):
         PixelWidthStart=35
         PixelWidthEnd=863
@@ -62,8 +50,11 @@ def CreateMockup(img,colour,size,device):
         if(device=="Mac"):
             ImageProperties[5] += -1
         elif(device=="iPad"):
-            ImageProperties[6] += 1
             ImageProperties[7] += 1
+    elif(size=="x-large"):
+        for i in range(0,len(ImageProperties)):
+            ImageProperties[i] = ImageProperties[i] * 2
+            ImageProperties[i] = int(ImageProperties[i])
  
     image = cv2.resize(image,(ImageProperties[7],ImageProperties[6]))
 
@@ -82,6 +73,7 @@ def CreateMockup(img,colour,size,device):
         image = cv2.merge((b, g, r, alpha_channel))
         device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
         
+        
     cv2.imshow("Device", device_img)
 
     cv2.imwrite("Exports/"+size+device+"Mockup"+str(random.randint(1,21)*5)+".png",device_img)
@@ -91,11 +83,11 @@ def CreateMockup(img,colour,size,device):
 #Alter 'img' and 'deviceColour' to create your own Mockup
 img = "Mockup/Cruyff-Mac.PNG"
 deviceColour = "White" #Only White Images are imported currentley
-size = "smalla" #Only applies for Monitor
+size = "small" #Only applies for Monitor
 device = "iPhone"
 
 #CreateMockup("Mockup/Cruyff.PNG",deviceColour,size,device)
-#CreateMockup("Mockup/Cruyff-iPad.PNG",deviceColour,size,"iPad")
+#CreateMockup(img,deviceColour,size,"Mac")
 #CreateMockup("Mockup/Cruyff-Monitor.PNG",deviceColour,size,"Monitor")
 #CreateMockup(img,deviceColour,size,"Mac")
 
