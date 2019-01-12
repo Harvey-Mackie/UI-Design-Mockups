@@ -28,7 +28,7 @@ $ pip install PyQt5
   - Size
 - View .PNG stored in your directory
 
-![gui](https://user-images.githubusercontent.com/38426388/51013382-fa78bc80-1559-11e9-8ad4-26060ebfa2e4.PNG)
+[![Image from Gyazo](https://i.gyazo.com/3fcc556a798b319f47d479a9e227c4db.gif)](https://gyazo.com/3fcc556a798b319f47d479a9e227c4db)
 
 
 ## Mockup Devices
