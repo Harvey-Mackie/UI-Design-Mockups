@@ -368,6 +368,8 @@ class Ui_MainWindow(object):
         self.radioColourBlack.setObjectName("radioColourBlack")
         self.radioSizeLarge = QtWidgets.QRadioButton(self.centralwidget)
         self.radioSizeLarge.setGeometry(QtCore.QRect(340, 410, 91, 41))
+        self.radioSizexLarge = QtWidgets.QRadioButton(self.centralwidget)
+        self.radioSizexLarge.setGeometry(QtCore.QRect(440, 410, 91, 41))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(14)
@@ -375,6 +377,8 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.radioSizeLarge.setFont(font)
         self.radioSizeLarge.setAutoExclusive(False)
+        self.radioSizexLarge.setFont(font)
+        self.radioSizexLarge.setAutoExclusive(False)
         self.radioSizeLarge.setObjectName("radioSizeLarge")
         self.radioSizeSmall = QtWidgets.QRadioButton(self.centralwidget)
         self.radioSizeSmall.setGeometry(QtCore.QRect(250, 410, 91, 41))
@@ -386,6 +390,7 @@ class Ui_MainWindow(object):
         self.radioSizeSmall.setFont(font)
         self.radioSizeSmall.setAutoExclusive(False)
         self.radioSizeSmall.setObjectName("radioSizeSmall")
+        self.radioSizexLarge.setObjectName("radioSizexLarge")
         self.buttonUpload = QtWidgets.QPushButton(self.centralwidget)
         self.buttonUpload.setEnabled(True)
         self.buttonUpload.setGeometry(QtCore.QRect(250, 180, 351, 31))
@@ -427,6 +432,7 @@ class Ui_MainWindow(object):
         self.radioColourBlack.raise_()
         self.radioSizeLarge.raise_()
         self.radioSizeSmall.raise_()
+        self.radioSizexLarge.raise_()
         self.buttonUpload.raise_()
         self.buttonManual.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
@@ -453,6 +459,7 @@ class Ui_MainWindow(object):
 
         self.radioSizeSmall.clicked.connect(self.DeviceSize)
         self.radioSizeLarge.clicked.connect(self.DeviceSize)
+        self.radioSizexLarge.clicked.connect(self.DeviceSize)
 
         
         self.buttonUpload.clicked.connect(self.setImage)
@@ -481,6 +488,7 @@ class Ui_MainWindow(object):
         self.radioColourBlack.setText(_translate("MainWindow", "Black"))
         self.radioSizeLarge.setText(_translate("MainWindow", "Large"))
         self.radioSizeSmall.setText(_translate("MainWindow", "Small"))
+        self.radioSizexLarge.setText(_translate("MainWindow", "X-Large"))
         self.buttonUpload.setText(_translate("MainWindow", "Choose a file..."))
         self.buttonManual.setText(_translate("MainWindow", "User Manual "))
 
@@ -566,17 +574,26 @@ class Ui_MainWindow(object):
         if(self.radioSizeSmall.isChecked()==True):
             pgValue += 25
             self.radioSizeLarge.setEnabled(False)
+            self.radioSizexLarge.setEnabled(False)
             size = "small"
             self.progressBar.setProperty("value", pgValue)
         elif(self.radioSizeLarge.isChecked()==True):
             pgValue += 25
             self.radioSizeSmall.setEnabled(False)
+            self.radioSizexLarge.setEnabled(False)
             size = "large"
             self.progressBar.setProperty("value", pgValue)
+        elif(self.radioSizexLarge.isChecked()==True):
+            pgValue += 25
+            self.radioSizeSmall.setEnabled(False)
+            self.radioSizeLarge.setEnabled(False)
+            self.progressBar.setProperty("value", pgValue)
+            size = "x-large"
         else:
             pgValue += -25
             self.radioSizeSmall.setEnabled(True)
             self.radioSizeLarge.setEnabled(True)
+            self.radioSizexLarge.setEnabled(True)
             self.progressBar.setProperty("value", pgValue)
         self.ActivateButton()
         
@@ -612,6 +629,7 @@ class Ui_MainWindow(object):
         
         self.radioSizeSmall.setChecked(False)
         self.radioSizeLarge.setChecked(False)
+        self.radioSizexLarge.setChecked(False)
         
     def GenerateMockup(self):
         print("Image = "+ filename)
