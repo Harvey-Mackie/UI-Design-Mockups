@@ -5,18 +5,17 @@ import random
 def CreateMockup(img,colour,size,device,rotation):
     image = cv2.imread(img, cv2.IMREAD_UNCHANGED)
     #Image Height and Width
-    width = 900
-    height = 900
     if(device=="iPhone"):
         if(rotation == "Landscape"):
             width = 334
             height = 659
             PixelWidthStart =  76
-            PixelWidthEnd =  582
             PixelHeightStart = 24
-            PixelHeightEnd = 310
-            MockupImageHeight =  286
-            MockupImageWidth = 506
+            if(colour=="White"):
+                PixelWidthEnd =  582
+                PixelHeightEnd = 310
+                MockupImageHeight =  286
+                MockupImageWidth = 506
             if(colour=="Black"):
                 PixelWidthEnd =  584
                 PixelHeightStart = 22
@@ -29,14 +28,17 @@ def CreateMockup(img,colour,size,device,rotation):
             height = 330
             PixelWidthStart = 24
             PixelHeightStart = 78
-            PixelHeightEnd = 582
-            MockupImageHeight = 504
-            MockupImageWidth = 283
+            if(colour=="White"):
+                PixelHeightEnd = 582
+                PixelWidthEnd = 307
+                MockupImageHeight = 504
+                MockupImageWidth = 283
             if(colour=="Black"):
                 PixelWidthEnd = 300
                 PixelHeightEnd = 570
                 MockupImageHeight = 492
                 MockupImageWidth = 276
+            
 
     elif(device=="iPad"):
         if(rotation == "Landscape"):
@@ -85,12 +87,15 @@ def CreateMockup(img,colour,size,device,rotation):
         MockupImageHeight = 229 
         MockupImageWidth =  366
     elif(device=="Monitor"):
+        width = 900
+        height = 900
         PixelWidthStart=35
         PixelWidthEnd=863
         PixelHeightStart = 40
         PixelHeightEnd = 625
         MockupImageHeight  =  585
         MockupImageWidth  =  828
+
     ImageProperties = [width, height, PixelWidthStart, PixelWidthEnd, PixelHeightStart,PixelHeightEnd,MockupImageHeight, MockupImageWidth]
     
     if(size=="small"):
@@ -114,15 +119,15 @@ def CreateMockup(img,colour,size,device,rotation):
 
     device_img = cv2.imread(imageLink,  cv2.IMREAD_UNCHANGED)
     device_img= cv2.resize(device_img,(ImageProperties[1],ImageProperties[0]))
-    #device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
-    try:
+    device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
+    """try:
         device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
     except ValueError:
         print("Required Step - Add Alpha channel")
         b, g, r = cv2.split(image)
         alpha_channel = np.ones(b.shape, dtype=b.dtype) * 255
         image = cv2.merge((b, g, r, alpha_channel))
-        device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image  
+        device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image  """
         
     cv2.imshow("Device", device_img)
 
@@ -131,11 +136,11 @@ def CreateMockup(img,colour,size,device,rotation):
     cv2.destroyAllWindows()
 
 #Alter 'img' and 'deviceColour' to create your own Mockup
-"""img = "Mockup/Cruyff-Landscape.PNG"
+img = "Mockup/Cruyff-Landscape.PNG"
 deviceColour = "White" #Only White Images are imported currentley
-size = "Black" #Only applies for Monitor
-device = "Monitor"
-rotation = "Landscape"
+size = "White" #Only applies for Monitor
+device = "iPhone"
+rotation = "Landscapae"
 
-CreateMockup(img,deviceColour,size,device,rotation)"""
+CreateMockup(img,deviceColour,size,device,rotation)
 
