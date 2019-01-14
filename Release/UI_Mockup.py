@@ -142,5 +142,5 @@ size = "White" #Only applies for Monitor
 device = "iPhone"
 rotation = "Landscapae"
 
-CreateMockup(img,deviceColour,size,device,rotation)
+#CreateMockup(img,deviceColour,size,device,rotation)
 
