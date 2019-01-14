@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\Harve\OneDrive\Documents\GitHub\UI-Design-Mockups\Release\App.ui'
+# Form implementation generated from reading ui file 'C:\Users\Harve\OneDrive\Documents\GitHub\UI-Design-Mockups\Release\MockupApp.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit, QFileDialog, QMessageBox
 from PyQt5.QtGui import QIcon
@@ -14,12 +15,13 @@ filename = ""
 device = ""
 deviceColour = ""
 size = ""
+rotation = ""
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(675, 623)
-        MainWindow.setFixedSize(675,623)
+        MainWindow.resize(675, 710)
+        MainWindow.setFixedSize(665,710)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -48,7 +50,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.buttonGenerate = QtWidgets.QPushButton(self.centralwidget)
         self.buttonGenerate.setEnabled(False)
-        self.buttonGenerate.setGeometry(QtCore.QRect(50, 530, 559, 51))
+        self.buttonGenerate.setGeometry(QtCore.QRect(50, 620, 559, 51))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Semibold")
         font.setPointSize(20)
@@ -299,7 +301,7 @@ class Ui_MainWindow(object):
         self.label_5.setAutoFillBackground(True)
         self.label_5.setObjectName("label_5")
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(57, 480, 551, 23))
+        self.progressBar.setGeometry(QtCore.QRect(57, 570, 551, 23))
         self.progressBar.setProperty("value", 0)
         self.progressBar.setTextVisible(True)
         self.progressBar.setOrientation(QtCore.Qt.Horizontal)
@@ -368,8 +370,6 @@ class Ui_MainWindow(object):
         self.radioColourBlack.setObjectName("radioColourBlack")
         self.radioSizeLarge = QtWidgets.QRadioButton(self.centralwidget)
         self.radioSizeLarge.setGeometry(QtCore.QRect(340, 410, 91, 41))
-        self.radioSizexLarge = QtWidgets.QRadioButton(self.centralwidget)
-        self.radioSizexLarge.setGeometry(QtCore.QRect(440, 410, 91, 41))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(14)
@@ -377,8 +377,6 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.radioSizeLarge.setFont(font)
         self.radioSizeLarge.setAutoExclusive(False)
-        self.radioSizexLarge.setFont(font)
-        self.radioSizexLarge.setAutoExclusive(False)
         self.radioSizeLarge.setObjectName("radioSizeLarge")
         self.radioSizeSmall = QtWidgets.QRadioButton(self.centralwidget)
         self.radioSizeSmall.setGeometry(QtCore.QRect(250, 410, 91, 41))
@@ -390,7 +388,6 @@ class Ui_MainWindow(object):
         self.radioSizeSmall.setFont(font)
         self.radioSizeSmall.setAutoExclusive(False)
         self.radioSizeSmall.setObjectName("radioSizeSmall")
-        self.radioSizexLarge.setObjectName("radioSizexLarge")
         self.buttonUpload = QtWidgets.QPushButton(self.centralwidget)
         self.buttonUpload.setEnabled(True)
         self.buttonUpload.setGeometry(QtCore.QRect(250, 180, 351, 31))
@@ -405,7 +402,7 @@ class Ui_MainWindow(object):
         self.buttonUpload.setCheckable(False)
         self.buttonUpload.setObjectName("buttonUpload")
         self.buttonManual = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonManual.setEnabled(True)
+        self.buttonManual.setEnabled(False)
         self.buttonManual.setGeometry(QtCore.QRect(-10, 120, 681, 41))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Emoji")
@@ -416,6 +413,75 @@ class Ui_MainWindow(object):
         self.buttonManual.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.buttonManual.setAutoFillBackground(False)
         self.buttonManual.setObjectName("buttonManual")
+        self.radioLandscape = QtWidgets.QRadioButton(self.centralwidget)
+        self.radioLandscape.setGeometry(QtCore.QRect(340, 490, 111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.radioLandscape.setFont(font)
+        self.radioLandscape.setAutoExclusive(False)
+        self.radioLandscape.setObjectName("radioLandscape")
+        self.label_6 = QtWidgets.QLabel(self.centralwidget)
+        self.label_6.setGeometry(QtCore.QRect(60, 480, 161, 51))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(120, 120, 120))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
+        self.label_6.setPalette(palette)
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_6.setFont(font)
+        self.label_6.setAutoFillBackground(True)
+        self.label_6.setObjectName("label_6")
+        self.radioPortrait = QtWidgets.QRadioButton(self.centralwidget)
+        self.radioPortrait.setGeometry(QtCore.QRect(250, 490, 91, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.radioPortrait.setFont(font)
+        self.radioPortrait.setAutoExclusive(False)
+        self.radioPortrait.setObjectName("radioPortrait")
+        self.radioSizexLarge = QtWidgets.QRadioButton(self.centralwidget)
+        self.radioSizexLarge.setGeometry(QtCore.QRect(430, 410, 91, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.radioSizexLarge.setFont(font)
+        self.radioSizexLarge.setAutoExclusive(False)
+        self.radioSizexLarge.setObjectName("radioSizexLarge")
         self.frame.raise_()
         self.buttonGenerate.raise_()
         self.label.raise_()
@@ -432,9 +498,12 @@ class Ui_MainWindow(object):
         self.radioColourBlack.raise_()
         self.radioSizeLarge.raise_()
         self.radioSizeSmall.raise_()
-        self.radioSizexLarge.raise_()
         self.buttonUpload.raise_()
         self.buttonManual.raise_()
+        self.radioLandscape.raise_()
+        self.label_6.raise_()
+        self.radioPortrait.raise_()
+        self.radioSizexLarge.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 675, 21))
@@ -446,7 +515,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
+        
         self.buttonGenerate.clicked.connect(self.GenerateMockup)
         
         self.radioPhone.clicked.connect(self.DeviceCheck)
@@ -460,6 +529,9 @@ class Ui_MainWindow(object):
         self.radioSizeSmall.clicked.connect(self.DeviceSize)
         self.radioSizeLarge.clicked.connect(self.DeviceSize)
         self.radioSizexLarge.clicked.connect(self.DeviceSize)
+        
+        self.radioPortrait.clicked.connect(self.DeviceRotation)
+        self.radioLandscape.clicked.connect(self.DeviceRotation)
 
         
         self.buttonUpload.clicked.connect(self.setImage)
@@ -470,7 +542,7 @@ class Ui_MainWindow(object):
 
 
         self.buttonManual.hide()
-        
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Mockup Generator"))
@@ -488,114 +560,124 @@ class Ui_MainWindow(object):
         self.radioColourBlack.setText(_translate("MainWindow", "Black"))
         self.radioSizeLarge.setText(_translate("MainWindow", "Large"))
         self.radioSizeSmall.setText(_translate("MainWindow", "Small"))
-        self.radioSizexLarge.setText(_translate("MainWindow", "X-Large"))
         self.buttonUpload.setText(_translate("MainWindow", "Choose a file..."))
         self.buttonManual.setText(_translate("MainWindow", "User Manual "))
+        self.radioLandscape.setText(_translate("MainWindow", "Landscape"))
+        self.label_6.setText(_translate("MainWindow", "Device Layout"))
+        self.radioPortrait.setText(_translate("MainWindow", "Portrait"))
+        self.radioSizexLarge.setText(_translate("MainWindow", "X-Large"))
 
-    
     def setImage(self):
+        #self.DeviceRotation()
         fileName, _ = QtWidgets.QFileDialog.getOpenFileName(None,"Select Image", "" ,"Image Files(*.png)")
         if fileName:
             pgValue = self.progressBar.value()
-            pgValue+= 25
+            pgValue+= 20
             self.buttonUpload.setEnabled(False)
             self.progressBar.setProperty("value", pgValue)
             global filename
             filename = fileName
         self.ActivateButton()
-     
+        self.RotationCheck()
+
             #from PyQt5.QtWidgets import QFileDialog
 
     def DeviceCheck(self):
+        #self.DeviceRotation()
         pgValue = self.progressBar.value()
         global device
         if(self.radioPhone.isChecked()==True):
-           self.radioTablet.setEnabled(False)
-           self.radioLaptop.setEnabled(False)
-           self.radioMonitor.setEnabled(False)
-           pgValue+= 25
-           device = "iPhone"
-           self.progressBar.setProperty("value", pgValue)
+            self.radioTablet.setEnabled(False)
+            self.radioLaptop.setEnabled(False)
+            self.radioMonitor.setEnabled(False)
+            pgValue+= 20
+            device = "iPhone"
+            self.progressBar.setProperty("value", pgValue)
         elif(self.radioTablet.isChecked()==True):
-           self.radioPhone.setEnabled(False)
-           self.radioLaptop.setEnabled(False)
-           self.radioMonitor.setEnabled(False)
-           pgValue+= 25
-           device = "iPad"
-           self.progressBar.setProperty("value", pgValue)
+            self.radioPhone.setEnabled(False)
+            self.radioLaptop.setEnabled(False)
+            self.radioMonitor.setEnabled(False)
+            pgValue+= 20
+            device = "iPad"
+            self.progressBar.setProperty("value", pgValue)
         elif(self.radioLaptop.isChecked()==True):
-           self.radioTablet.setEnabled(False)
-           self.radioPhone.setEnabled(False)
-           self.radioMonitor.setEnabled(False)
-           pgValue+= 25
-           device = "Mac"
-           self.progressBar.setProperty("value", pgValue)
+            self.radioTablet.setEnabled(False)
+            self.radioPhone.setEnabled(False)
+            self.radioMonitor.setEnabled(False)
+            pgValue+= 20
+            device = "Mac"
+            self.progressBar.setProperty("value", pgValue)
         elif(self.radioMonitor.isChecked()==True):
-           self.radioPhone.setEnabled(False)
-           self.radioLaptop.setEnabled(False)
-           self.radioTablet.setEnabled(False)
-           pgValue+= 25
-           device = "Monitor"
-           self.progressBar.setProperty("value", pgValue)
+            self.radioPhone.setEnabled(False)
+            self.radioLaptop.setEnabled(False)
+            self.radioTablet.setEnabled(False)
+            pgValue+= 20
+            device = "Monitor"
+            self.progressBar.setProperty("value", pgValue)
         else:
-            pgValue += -25
+            pgValue += -20
             self.radioPhone.setEnabled(True)
             self.radioLaptop.setEnabled(True)
             self.radioTablet.setEnabled(True)
             self.radioMonitor.setEnabled(True)
             self.progressBar.setProperty("value", pgValue)
         self.ActivateButton()
-           
+        self.RotationCheck()
+        
 
     def DeviceColour(self):
+        #self.DeviceRotation()
         global deviceColour
         pgValue = self.progressBar.value()
         if(self.radioColourWhite.isChecked()==True):
-            pgValue += 25
+            pgValue += 20
             self.radioColourBlack.setEnabled(False)
             deviceColour = "White"
             self.progressBar.setProperty("value", pgValue)
         elif(self.radioColourBlack.isChecked()==True):
-            pgValue += 25
-            self.radioColourWhite.setEnabled(False)
+            pgValue += 20
+            self.radioColourWhite.setEnabled(True)
             deviceColour = "Black"
             self.progressBar.setProperty("value", pgValue)
         else:
-            pgValue += -25
+            pgValue += -20
             self.radioColourBlack.setEnabled(True)
             self.radioColourWhite.setEnabled(True)
             self.progressBar.setProperty("value", pgValue)
         self.ActivateButton()
+        self.RotationCheck()
 
 
     def DeviceSize(self):
+        #self.DeviceRotation()
         global size
         pgValue = self.progressBar.value()
         if(self.radioSizeSmall.isChecked()==True):
-            pgValue += 25
+            pgValue += 20
             self.radioSizeLarge.setEnabled(False)
             self.radioSizexLarge.setEnabled(False)
             size = "small"
             self.progressBar.setProperty("value", pgValue)
         elif(self.radioSizeLarge.isChecked()==True):
-            pgValue += 25
+            pgValue += 20
             self.radioSizeSmall.setEnabled(False)
             self.radioSizexLarge.setEnabled(False)
             size = "large"
             self.progressBar.setProperty("value", pgValue)
         elif(self.radioSizexLarge.isChecked()==True):
-            pgValue += 25
+            pgValue += 20
             self.radioSizeSmall.setEnabled(False)
             self.radioSizeLarge.setEnabled(False)
             self.progressBar.setProperty("value", pgValue)
             size = "x-large"
         else:
-            pgValue += -25
+            pgValue += -20
             self.radioSizeSmall.setEnabled(True)
             self.radioSizeLarge.setEnabled(True)
             self.radioSizexLarge.setEnabled(True)
             self.progressBar.setProperty("value", pgValue)
         self.ActivateButton()
+        self.RotationCheck()
         
     def ActivateButton(self):
         Value = self.progressBar.value()
@@ -616,7 +698,7 @@ class Ui_MainWindow(object):
         
         self.buttonUpload.setEnabled(True)
         
-        self.radioColourBlack.setEnabled(False)
+        self.radioColourBlack.setEnabled(True)
         self.radioColourWhite.setEnabled(True)
         
         self.radioColourWhite.setChecked(False)
@@ -626,14 +708,59 @@ class Ui_MainWindow(object):
         
         self.radioSizeSmall.setEnabled(True)
         self.radioSizeLarge.setEnabled(True)
+        self.radioSizexLarge.setEnabled(True)
         
         self.radioSizeSmall.setChecked(False)
         self.radioSizeLarge.setChecked(False)
         self.radioSizexLarge.setChecked(False)
         
+        self.radioPortrait.setChecked(False)
+        self.radioLandscape.setChecked(False)
+    
+    def RotationCheck(self):
+        global device
+        if(device=="Mac" or device=="Monitor"):
+            self.radioLandscape.setEnabled(False)
+            self.radioColourBlack.setEnabled(False)
+            if(self.radioLandscape.setChecked(False)==True):
+                self.DeviceRotation()
+                self.radioLandscape.setChecked(False)
+                device = ""
+
+        elif(self.radioPortrait.isChecked()==True):
+            self.radioLandscape.setEnabled(False)
+            self.radioPortrait.setEnabled(True)
+        else:
+            self.radioLandscape.setEnabled(True)
+
+                
+                
+            
+    def DeviceRotation(self):
+        global rotation
+        pgValue = self.progressBar.value()
+        #self.DeviceRotation()
+        if(self.radioPortrait.isChecked()==True):
+            pgValue += 20
+            self.radioLandscape.setEnabled(False)
+            rotation = "Portrait"
+            self.progressBar.setProperty("value", pgValue)
+        elif(self.radioLandscape.isChecked()==True):
+            pgValue += 20
+            self.radioPortrait.setEnabled(False)
+            rotation = "Landscape"
+            self.progressBar.setProperty("value", pgValue)
+        else: 
+            pgValue += -20
+            self.radioPortrait.setEnabled(True)
+            self.radioLandscape.setEnabled(True)
+            self.progressBar.setProperty("value", pgValue)
+        self.ActivateButton()
+        self.RotationCheck()
+        
     def GenerateMockup(self):
         print("Image = "+ filename)
-        UI.CreateMockup(filename,deviceColour,size,device)
+        UI.CreateMockup(filename,deviceColour,size,device,rotation)
         print("Success")
         self.resetWindow()
 
@@ -641,7 +768,6 @@ class Ui_MainWindow(object):
         msg = QtWidgets.QMessageBox.question(self,'test', 'test',QtWidgets.QMessageBox.Yes|QtWidgets.QMessageBox.No)
     
 
-            
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

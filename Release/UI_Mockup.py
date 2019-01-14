@@ -119,15 +119,15 @@ def CreateMockup(img,colour,size,device,rotation):
 
     device_img = cv2.imread(imageLink,  cv2.IMREAD_UNCHANGED)
     device_img= cv2.resize(device_img,(ImageProperties[1],ImageProperties[0]))
-    device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
-    """try:
+    #device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
+    try:
         device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image
     except ValueError:
         print("Required Step - Add Alpha channel")
         b, g, r = cv2.split(image)
         alpha_channel = np.ones(b.shape, dtype=b.dtype) * 255
         image = cv2.merge((b, g, r, alpha_channel))
-        device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image  """
+        device_img[ImageProperties[4]:ImageProperties[5], ImageProperties[2]:ImageProperties[3]] = image 
         
     cv2.imshow("Device", device_img)
 
